@@ -12,7 +12,11 @@ public class CalculadoraManual {
 		double salarioBruto = Double.parseDouble(keyboard.nextLine());
 		
 		// Implemente aqui
+		 Inss inss  = new Inss(salarioBruto);
+		 double descontoInss = inss.calcularDesconto();
+		System.out.println("Desconto do Inss " + descontoInss);
 		
+		 salarioLiquido = salarioBruto - descontoInss;
 		System.out.println("Salario Liquido: " + salarioLiquido);
 	}
 
